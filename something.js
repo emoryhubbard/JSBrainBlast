@@ -179,6 +179,8 @@ However, you will need to convert it into functions that use function input
 and function output instead.
 */
 
+let firstName = "clark"
+
 //Examples of user input:
 let input = prompt("Enter a word: ")
 
@@ -209,9 +211,9 @@ variable is simply named "input" in the function definition.
 username = capitalizeWord(firstName) //<------- name is output
 function capitalizeWord(input) {
     let output = ""
-    if (word[0] == "a")
+    if (input[0] == "a")
         output += "A"
-    if (word[0] == "b")
+    if (input[0] == "b")
         output += "B"
     // ...
     for (let index = 1; index < input.length - 1; index++) {
@@ -224,3 +226,221 @@ function capitalizeWord(input) {
 Note how the function's output is stored into the variable "name", but its
 output variable is simply named "output" in the function definition.
 */
+
+/*
+The following code was created as I showed how to begin building something like
+a large financial app for a bank fairly quickly using the concept
+of functions, as discussed above.
+import {connectToDatabase, loadUserDatafromDatabse} from "./database.js";
+
+while (sessionOver != true) {
+    renderLoginPage()
+    loginButton.addEventListener(connectToDatabase)
+    let DBConnection = connectToDatabase()
+    let userData = loadUserDatafromDatabase(DBConnection)
+    renderAccountPage(userData)
+    if (userLikelyToDefault())
+        renderLoanNotification()
+}
+*/
+
+//DON'T DO THIS: pageObject.renderPage(account.info())
+
+/*
+During the following code exercises, you will be given
+function-less code that you will convert to have a function. The
+code within this comment is an example of function-less
+code, and the code after this comment is an example of
+what it should like when converted, with a new function
+defined and used. They key is keeping
+track of user inputs, user outputs, function inputs, and
+function outputs, and properly selecting your function
+input and output variables and statements.
+*/
+
+/*
+Function Name: removeFirstLetter()
+Function Input: any word that the programmer passes in
+Function Output: word with missing first letter, eg. "at" if word is "cat"
+*/
+
+// Function-less code:
+
+let pet = "cat";
+let friend = "emory";
+let code = "fun";
+
+
+let containA = false
+let indexOfA = 0
+
+for(let index=0; index <pet.length;index++){
+    if (pet[index] == "a"){
+        containA = true;
+        indexOfA = index;
+        // return index; use this line later when making a function
+    }
+
+
+}
+console.log("does cat contain a?" + containA)
+if (containA = true){
+    console.log("OOO OOO, Monkey found A Monkey found A!!!!")
+    console.log("It's at index " + indexOfA + "!!!!")
+}
+
+// Same code converted to have a function:
+
+pet = "cat";
+friend = "emory";
+code = "fun";
+
+
+containA = false
+oldWord = prompt("Enter a word: ") // user input
+
+//   |                       |
+//  \/ function output      \/ function input
+index = getIndexOfLetterA(oldWord)
+
+console.log("does cat contain a?" + containA)
+if (containA = true){
+    console.log("OOO OOO, Monkey found A Monkey found A!!!!") // user output
+    console.log("It's at index " + index + "!!!!")
+}
+
+function getIndexOfLetterA(oldWord) { // function input
+    for(let index=0; index <oldWord.length;index++){
+        if (oldWord[index] == "a"){
+            containA = true;
+            return index; // function output
+        }
+    
+    
+    }
+}
+
+/*
+Function Name: removeFirstLetter()
+Function Input: any word that the programmer passes in
+Function Output: word with missing first letter, eg. "at" if word is "cat"
+*/
+
+// Function-less code:
+
+let customer = prompt("What is the customer's name? ")
+
+let output = ""
+for (let index = 0; index < customer.length; index++) {
+    if (index != 0)
+        output += customer[index]
+}
+
+console.log("The customer's name with the first letter removed is "
+    + output)
+
+// Same code converted to have a function: [you do this part]
+
+/*
+Function Name: getScrambled()
+Function Input: any word that the programmer passes in
+Function Output: scrambled version of word, eg. "tca" if word is "cat"
+*/
+
+// Function-less code:
+
+let word = prompt("Choose any word: ")
+
+let length = word.length
+let positions = []
+// generate a list of positions, like [0, 1, 2, 3, 4] if word is "crate"
+for (let index = 0; index < length; index++) {
+    positions[index] = index
+}
+// scramble the list, making it something like [3, 1, 0, 2, 4]
+for (let index = 0; index < length - 1; index++) {
+    let position1 = index
+    
+    let position2 = Math.random() * (length - 1)
+    position2 = Math.floor(position2)
+
+    position1Value = positions[position1]
+    position2Value = positions[position2]
+    positions[position1] = position2Value
+    positions[position2] = position1Value
+}
+
+let scrambled = ""
+// take each posiiton, get the letter it represents, and make the word
+for (let index = 0; index < length; index++) {
+    let position = positions[index]
+    scrambled += word[position]
+}
+
+console.log("The scrambled version of the word is " + scrambled)
+
+// Same code converted to have a function: [you do this part]
+
+/*
+Function Name: containsString()
+Function Input: any text that the programmer passes in
+                + any target string that the programmer passes in
+Function Output: true or false, true if text contains target
+
+*/
+
+// Function-less code:
+
+word = prompt("Enter a phrase or long text: ")
+target = prompt("The previous text will be checked to see if it contains "
+    + "a target string. What target string would you like to check for? ")
+
+let containsTarget = false
+for (let index = 0; index < word.length; index++) {
+    let stillMatching = true
+    // check each letter of the target until it stops matching
+    for (let targetIndex = 0; targetIndex < target.length; targetIndex++) {
+        // eg. if word is "crate" and target is "ate",
+        // and we are on "a", check if word[2 + 0] == target [0]
+        // which reduces to "a" == "a"
+        if (stillMatching && word[index + targetIndex] == target[targetIndex])
+            stillMatching = true
+        else
+            stillMatching = false
+    }
+    if (stillMatching)
+        containsTarget = true
+}
+
+console.log("Did the text contain the target string? " + containsTarget)
+
+// Same code converted to have a function: [you do this part]
+
+
+
+/*
+getLength()
+getReverse()
+getUppercase()
+getLowercase()
+removeFirstLetter()
+removeLastLetter()
+addMr()
+removeTitle()
+removeWhitespace()
+hasLetterA()
+getScrambled()
+find() or getPositionOf()
+containsString()
+swapItems() eg. swapItems(1, 3) on items for array [0, 1, 2, 3, 4]
+*/
+
+
+
+
+
+
+
+
+
+
