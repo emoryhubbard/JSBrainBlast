@@ -342,45 +342,44 @@ console.log("The customer's name with the first letter removed is "
 // Same code converted to have a function: [you do this part]
 
 /*
-Function Name: getScrambled()
-Function Input: any word that the programmer passes in
-Function Output: scrambled version of word, eg. "tca" if word is "cat"
-*/
+	Function Name: getScrambled()
+	Function Input: any word that the programmer passes in
+	Function Output: scrambled version of word, eg. "tca" if word is "cat"
+	*/
 
-// Function-less code:
+	// Function-less code:
 
-let word = prompt("Choose any word: ")
+	let word = prompt("Choose any word: ")
 
-let length = word.length
-let positions = []
-// generate a list of positions, like [0, 1, 2, 3, 4] if word is "crate"
-for (let index = 0; index < length; index++) {
-    positions[index] = index
-}
-// scramble the list, making it something like [3, 1, 0, 2, 4]
-for (let index = 0; index < length - 1; index++) {
-    let position1 = index
-    
-    let position2 = Math.random() * (length - 1)
-    position2 = Math.floor(position2)
+	let length = word.length
+	let positions = []
+	// generate a list of positions, like [0, 1, 2, 3, 4] if word is "crate"
+	for (let index = 0; index < length; index++) {
+		positions[index] = index
+	}
+	// scramble the list, making it something like [3, 1, 0, 2, 4]
+	for (let index = 0; index < length - 1; index++) {
+		let position1 = index
+		
+		let position2 = Math.random() * (length - 1)
+		position2 = Math.floor(position2)
 
-    position1Value = positions[position1]
-    position2Value = positions[position2]
-    positions[position1] = position2Value
-    positions[position2] = position1Value
-}
+		position1Value = positions[position1]
+		position2Value = positions[position2]
+		positions[position1] = position2Value
+		positions[position2] = position1Value
+	}
 
-let scrambled = ""
-// take each posiiton, get the letter it represents, and make the word
-for (let index = 0; index < length; index++) {
-    let position = positions[index]
-    scrambled += word[position]
-}
+	let scrambled = ""
+	// take each position, get the letter it represents, and make the word
+	for (let index = 0; index < length; index++) {
+		let position = positions[index]
+		scrambled += word[position]
+	}
 
-console.log("The scrambled version of the word is " + scrambled)
+	console.log("The scrambled version of the word is " + scrambled)
 
-// Same code converted to have a function: [you do this part]
-
+	// Same code converted to have a function: [you do this part]
 /*
 Function Name: containsString()
 Function Input: any text that the programmer passes in
