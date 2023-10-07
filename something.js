@@ -256,6 +256,51 @@ defined and used. They key is keeping
 track of user inputs, user outputs, function inputs, and
 function outputs, and properly selecting your function
 input and output variables and statements.
+
+When you get to the part that says Function Name: etc, that
+is where you will do those exercises. However, I found that before
+doing those exercises, it is very helpful to first go over how
+to write the skeleton of a main program with your student with
+preliminary exercises. First watch a demonstration of someone
+writing the skeleton main code, then you practice it. Then,
+watch a demonstration of someone writing the function skeleton
+code, then you practice it.
+
+The rules for the preliminary exercises
+are that you have access to any function you can imagine, so
+long as you give it the right input to know what to do. Here
+are some examples:
+
+*/
+
+/*
+1. Ask the user for a word (he inputs "can"),
+2. Then output to the user something like
+"here is your word spelled backwards: nac"
+
+*/
+
+let input2 = prompt("Please enter a word")
+let output2 = reverseWord(input2)
+console.log("Here is your word spelled backwards: " + output2)
+
+
+
+function reverseWord(word) {
+    let output = ""
+    /* . . . */
+    return output
+}
+
+/*
+1. Ask the user for a sentence (he inputs "Hi, my name is Tyler.")
+2. Then output to the user something like
+"here is what you wrote without spaces: "Hi,mynameisTyler."
+*/
+/*
+Now that you've done the preliminary exercies, here are the
+function conversion exercises (see the explanation before
+the preliminary exercises if you need to remember what to do):
 */
 
 /*
@@ -319,6 +364,12 @@ function getIndexOfLetterA(oldWord) { // function input
     
     }
 }
+
+/* Debug Bonus practice!
+    There are a couple of bugs in the previous function-less and
+    function-full code examples.
+    Find and fix them!
+*/
 
 /*
 Function Name: removeFirstLetter()
