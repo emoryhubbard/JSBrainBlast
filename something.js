@@ -71,6 +71,17 @@ Modify and move initial "exercise".
     of functions, and also with simple user input and console output.
     Then invite the student to use the same method to do the next
     exercise.
+Add videos.
+    Each time a new exercise is introduced, make a video to demonstrate
+    how to solve one of those problem statements, or at least what
+    it looks like to solve one of those problem statements by doing
+    one (using the given solved examples I've already included),
+    so they can
+    clearly see what they should be doing with the next unsolved
+    problem statement.
+Clarify function-less code exercise.
+    For an example of how to express it more clearly,
+    See Function-less code.
 Add if practice and text adventure exercise.
     These should come first, before the algorithm design, since
     a prereq to being able to make algorithms is understanding if
@@ -374,8 +385,10 @@ code, then you practice it.
 
 The rules for the preliminary exercises
 are that you have access to any function you can imagine, so
-long as you give it the right input to know what to do. Here
-are some examples:
+long as you give it the right input to know what to do. You
+will want to implement those functions, but hold your horses.
+Do a few of these first, pretending that the function skeleton
+does the full operation. Here are some examples:
 
 */
 
@@ -410,7 +423,7 @@ the preliminary exercises if you need to remember what to do):
 */
 
 /*
-Function Name: removeFirstLetter()
+Function Name: getIndexOfA()
 Function Input: any word that the programmer passes in
 Function Output: word with missing first letter, eg. "at" if word is "cat"
 */
@@ -452,7 +465,7 @@ oldWord = prompt("Enter a word: ") // user input
 
 //   |                       |
 //  \/ function output      \/ function input
-index = getIndexOfLetterA(oldWord)
+index = getIndexOfA(oldWord)
 
 console.log("does cat contain a?" + containA)
 if (containA = true){
@@ -460,7 +473,7 @@ if (containA = true){
     console.log("It's at index " + index + "!!!!")
 }
 
-function getIndexOfLetterA(oldWord) { // function input
+function getIndexOfA(oldWord) { // function input
     for(let index=0; index <oldWord.length;index++){
         if (oldWord[index] == "a"){
             containA = true;
@@ -497,6 +510,19 @@ console.log("The customer's name with the first letter removed is "
     + output)
 
 // Same code converted to have a function: [you do this part]
+
+/* Algorithm Bonus pratice:
+    removeWhitespace() can be implemented using a similar approach to the
+    removeFirstLetter() function! Go back and implement it.
+
+    Hints:
+    
+    Scroll to the right to get hints. Try on your own for 15 minutes,
+    setting a timer. If you feel stuck, then you can look at the hints.
+    Only take one at a time, just enough to get you unstuck. If you
+    get stuck again, look at the next hint, and repeat as needed until you
+    figure it out.                                                              Hints: 1. You can use it for inspiration, since the basic loop should work, but something in there will need to change.    2. The thing that will need to change will be the condition.
+*/
 
 /*
 	Function Name: getScrambled()
