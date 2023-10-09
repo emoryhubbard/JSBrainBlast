@@ -1,9 +1,98 @@
-// Code for producting output on page:
-//output = document.querySelector(".output")
-//output.innerHTML = writeMyWord() //replace with your function
+/*
+To-do list:
+Refactor to Markdown.
+    I can refactor the whole file to markdown and make a
+    separate tab open in my editor to test code snippets.
+    I just wish the code would be highlighted when reading
+    it in markdown the same way it is in the editor. To
+    do that, I might be able to refactor this to be a web
+    page, or create or find a web service that lets you
+    create a new colorized markdown view with a link like
+    colorfulmarkdown.com/?action=colorize+url=github.com
+Remove initial functions.
+    Change the initial exercises to not use functions yet.
+    Introduce the functions only in the section that says
+    Why We Use Functions Brain Blast. The purpose of this is
+    to focus on teaching algorithm design and reduce
+    confusion.
+Use console for output.
+    Change the initial exercises to use just the console
+    for output. The purpose of this is to focus on teaching
+    algorithm design, and reduce confusion.
+    It is good to demonstrate how to write
+    to the page, and let them save it for reference, but there
+    should be no boilerplate code to memorize or use afterwards.
+    When they want to move on from just training algorithm design
+    and actually interact with users properly, they can simply
+    reference that note or look it up.
+    // Code for producting output on page:
+    //output = document.querySelector(".output")
+    //output.innerHTML = writeMyWord() //replace with your function
+    So in short don't use Function name, input, and output format
+    for the first exercise. Instead, use the format of
+    Program name:
+    User input:
+    User output:
+    In order to reduce confusion later when we introduce function
+    input and function output.
+    Then, while this format is being introduced, describe how to
+    translate it into simple steps:
+    1. Ask the user for a word (he inputs "can"),
+    2. Then output to the user something like
+    "here is your word spelled backwards: nac"
+    I haven't decided yet whether to include those steps with
+    each new exercise, or let them figure them out on their own.
+    Perhaps make a new series of exercises just for that purpose
+    of teaching how to write the steps.
+Modify and move initial "exercise".
+    Change initial exercise to use string reversal only as an
+    example of how to design more complex algorithms, without the
+    student needing to code that one on their own yet. Also, that
+    one uses functions, which adds unnecessary complexity. The video
+    can be remade to not use functions yet, reducing confusion.
+    It also needs to be remade to discuss how to do simple user input and
+    output using prompt and console.log(). 
+    It also needs to be moved to after string operations have
+    been introduced. It also needs to be changed to not use a
+    word splicing example--you can simply have it focus on a
+    string reversal instead. The only time when you need two
+    examples is when a student needs an exercise to do after
+    your initial example. Instead, this video is just intended to
+    give a bird's eye view, more like a lecture to show what is
+    possible when your skill increases using this method. Project-based
+    learning is best of course, and these short lectures simply serve
+    to enhance understanding of those projects, the motivations behind
+    why we do certain things, and open up possibilities for the future.
+    Essentially, it answers the question "what can we accomplish with
+    the paper method / why is it important", whereas the next video
+    will address how to actually use it in a simpler example.
+    Then, make a new, follow-up video of doing a SIMPLE algorithm
+    using the paper method, like double string, also without the use
+    of functions, and also with simple user input and console output.
+    Then invite the student to use the same method to do the next
+    exercise.
+Add if practice and text adventure exercise.
+    These should come first, before the algorithm design, since
+    a prereq to being able to make algorithms is understanding if
+    statments, just like a prereq is understanding how to access
+    string indices (that's why I moved the Make Your Own Word
+    exercises to come first.)
+    Currently I have it in Python. However, the code is not very
+    readable. It was my old code and not written for high readability,
+    and looks confusing, since back then I had a habit of trying to
+    save code lines in unusual ways or just to challenge myself on
+    simple exercises.
+*/
 
-//Code for running a stand-alone function
-hasLetterExercises() // replace with your function
+/*
+If interested in how I figured out the order in which to teach
+these exercises, it was through trial and error. Many of them
+were intially too difficult. When I realized that
+a student would have difficulty with certain areas, I created
+additional exercises to help train a skill or concept to work on
+before continuing with a difficult exercise. You can see
+how I evolved the order of these exercises through the GitHub commits.
+*/
 
 // The following comments will introduce exercises for
 // improving your algorithm design skills. You can complete
@@ -13,23 +102,6 @@ hasLetterExercises() // replace with your function
 // up skills to create functions that perform tasks just as
 // complicated as the string reversal tool, and standard
 // library functions.
-
-/*
-reverseString()
-Input: any word the user specifies
-Output: that word spelled backwards
-This is also a great initial exercise for teaching algorithm design.
-It can be a big leap conceptually to do it from scratch, but working
-through it with a student allows them to get a bird's eye view
-of how to create an algorithm from scratch. For what this process
-looks like, see this video for an introduction into the process by
-showing how to build a word splicing tool:
-https://youtu.be/WKuqDFxxrUs
-Then, if you still need more help, see this video for how to
-make the reverse string tool, but only as much as you need:
-https://youtu.be/K1yVXez0zuA
-*/
-
 
 /*
 doubleString()
@@ -46,12 +118,9 @@ Input: any word the user specifies
 Output: just a single letter
 */
 
-/*
-getLastTwoLetters()
-Input: any word the user specifies
-Output: last two letters, eg. "th" if word is "death"
-This one seems pretty easy but it will be good practice for working with selecting letter positions and making new strings out of the letters
-If you struggle with it, try practing 
+/*In the example given below, two new words were created from the
+existing words using their letters, "roar" (commented out) and
+"broom". Study it to see how to make your own examples next.
 */
 
 function writeMyWord() {
@@ -73,8 +142,45 @@ function writeMyWord() {
     return myWord;
 }
 
-// To write your own hasLetterExercises with different words, checking if
-// if they contain different letters.
+/*
+Now, Make your own! Write a new program that has 3 different starting words,
+and create two new words using their letters in a similar way. Don't
+copy the code directly. Simply use it to see how you can access the
+letter positions, which will change for you. 
+It will be good practice for working with selecting letter positions
+and making new strings out of the letters.
+*/
+
+/*
+reverseString()
+Input: any word the user specifies
+Output: that word spelled backwards
+This is also a great initial exercise for teaching algorithm design.
+It can be a big leap conceptually to do it from scratch, but working
+through it with a student allows them to get a bird's eye view
+of how to create an algorithm from scratch. For what this process
+looks like, see this video for an introduction into the process by
+showing how to build a word splicing tool:
+https://youtu.be/WKuqDFxxrUs
+Then, if you still need more help, see this video for how to
+make the reverse string tool, but only as much as you need:
+https://youtu.be/K1yVXez0zuA
+*/
+
+/*
+getLastTwoLetters()
+Input: any word the user specifies
+Output: last two letters, eg. "th" if word is "death"
+This one seems pretty easy, but I've found it can be deceptively
+difficult for some students.
+If you skip exercises that "look easy" like this, just be aware that it
+gets harder, and you can always go back to do ones you skipped to
+increase your intelligence as needed.
+*/
+
+/*Write your own hasLetterExercises with different words, checking if
+if they contain different letters.
+*/
 
 function hasLetterExercises() {
     let name = "emory"
