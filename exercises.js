@@ -350,14 +350,15 @@ a large financial app for a bank fairly quickly using the concept
 of functions, as discussed above.
 import {connectToDatabase, loadUserDatafromDatabse} from "./database.js";
 
-while (sessionOver != true) {
-    renderLoginPage()
-    loginButton.addEventListener(connectToDatabase)
+renderLoginPage()
+loginButton.addEventListener(loginUser)
+
+function loginUser(e) {
     let DBConnection = connectToDatabase()
     let userData = loadUserDatafromDatabase(DBConnection)
     renderAccountPage(userData)
     if (userLikelyToDefault())
-        renderLoanNotification()
+        renderDefaultNotification()
 }
 */
 
@@ -615,9 +616,8 @@ getScrambled()
 find() or getPositionOf()
 containsString()
 swapItems() eg. swapItems(1, 3) on items for array [0, 1, 2, 3, 4]
+replaceOsWithAs()
 */
-
-
 
 
 
