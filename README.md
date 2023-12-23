@@ -40,8 +40,7 @@ Explore the provided notes on the teaching method, emphasizing skills like:
 ## Additional Resources
 
 - [Lucidapp](https://lucid.app) - An infinite canvas tool for visualization.
-- [Lucidapp](https://lucid.app/lucidchart/b95b5da9-15d0-4e92-979c-9fc359a03587/edit?viewport_loc=125%2C-234%2C1969%2C869%2C0_0&invitationId=inv_b7bb61d5-7643-4661-a84d-12eeb67da630)
-- [Infinite Canvas in Lucidapp](#) - Instructions for setting up an infinite canvas.
+- [Lucidapp](https://lucid.app/lucidchart/b95b5da9-15d0-4e92-979c-9fc359a03587/edit?viewport_loc=125%2C-234%2C1969%2C869%2C0_0&invitationId=inv_b7bb61d5-7643-4661-a84d-12eeb67da630) - An example canvas from the videos.
 
 ## Infinite Canvas in Lucidapp
 
