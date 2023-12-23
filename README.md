@@ -1,6 +1,6 @@
-# Brain Blasts - Programming Exercises
+# JS Brain Blasts - Programming Exercises
 
-Welcome to the Brain Blasts repository, a collection of programming exercises designed to enhance your algorithmic thinking skills. This repository follows a unique 3-step problem-solving approach to help you build a strong foundation in algorithm design. The exercises are presented in chronological order in the `exercises.js` file, embedded as comments.
+Welcome to the JS Brain Blasts repository, a collection of programming exercises designed to enhance your algorithmic thinking skills. This repository follows a unique 3-step problem-solving approach to help you build a strong foundation in algorithm design. The exercises are presented in chronological order in the `exercises.js` file, embedded as comments.
 
 ## Purpose
 
