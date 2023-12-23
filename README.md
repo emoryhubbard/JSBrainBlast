@@ -23,9 +23,9 @@ The primary goal of Brain Blasts is to teach algorithmic thinking through carefu
 
 ## YouTube Video Links
 
+- [How to Design an Algorithm Third Take](https://youtu.be/K1yVXez0zuA)
 - [How to Design An Algorithm Video (Second Take)](https://youtu.be/WKuqDFxxrUs)
 - [How to Design An Algorithm Video](https://youtu.be/B_YXEku3WD0)
-- [How to Design an Algorithm Third Take](https://youtu.be/K1yVXez0zuA)
 
 ## Teaching Methodology
 
